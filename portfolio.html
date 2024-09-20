@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - 3D Artist & Graphic Designer</title>
+    <link rel="stylesheet" href="css/styles.css"><!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Loading Animation -->
+    <div id="loading-screen">
+        <div class="loader"></div>
+    </div>
+    <!-- Sticky Menu -->
+    <nav id="side-menu">
+        <button id="menu-toggle">☰</button>
+        <ul>
+            <li>
+                <a href="index.html">
+                    <span class="menu-icon"><i class="fas fa-home"></i></span>
+                    <span class="menu-text">Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="portfolio.html">
+                    <span class="menu-icon"><i class="fas fa-briefcase"></i></span>
+                    <span class="menu-text">Portfolio</span>
+                </a>
+            </li>
+            <li>
+                <a href="about.html">
+                    <span class="menu-icon"><i class="fas fa-user"></i></span>
+                    <span class="menu-text">About</span>
+                </a>
+            </li>
+            <li>
+                <a href="contact.html">
+                    <span class="menu-icon"><i class="fas fa-envelope"></i></span>
+                    <span class="menu-text">Contact</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <div id="main-content">
+        <section id="portfolio">
+            <h1>Portfolio</h1>
+            <div id="filter-options">
+                <button data-filter="all">All</button>
+                <button data-filter="animation">Animation</button>
+                <button data-filter="3d">3D</button>
+                <button data-filter="graphic">Graphic Design</button>
+                <button data-filter="digital">Digital Design</button>
+            </div>
+            <div id="portfolio-grid">
+                <div class="portfolio-item" data-category="animation">
+                    <img src="images/animation1.jpg" alt="Animation Project">
+                    <div class="overlay">Animation Project 1</div>
+                </div>
+                <div class="portfolio-item" data-category="3d">
+                    <img src="images/3d1.jpg" alt="3D Project">
+                    <div class="overlay">3D Project 1</div>
+                </div>
+                <div class="portfolio-item" data-category="graphic">
+                    <img src="images/graphic1.jpg" alt="Graphic Design Project">
+                    <div class="overlay">Graphic Design Project 1</div>
+                </div>
+                <!-- Add more portfolio items here -->
+            </div>
+        </section>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

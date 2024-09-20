@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graphic Designer Portfolio</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script> <!-- Load EmailJS library -->
+</head>
+<body>
+
+    <header>
+        <div class="menu-icon" id="menu-icon">&#9776;</div>
+        <div class="logo">Graphic Designer</div>
+        <nav>
+            <div class="close-icon" id="close-icon" style="display: none;">&times;</div>
+            <ul id="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="content-wrapper">
+        <section id="home">
+            <h1>Welcome to My Portfolio</h1>
+        </section>
+        <section id="portfolio">
+            <h2>My Portfolio</h2>
+            <div class="portfolio-grid">
+                <a href="./portfolio/portfolio1.html" class="portfolio-item">Project 1</a>
+                <a href="./portfolio/portfolio2.html" class="portfolio-item">Project 2</a>
+                <a href="./portfolio/portfolio3.html" class="portfolio-item">Project 3</a>
+                <a href="./portfolio/portfolio4.html" class="portfolio-item">Project 4</a>
+            </div>
+        </section>
+        
+        <section id="about">
+            <h2>About Me</h2>
+            <p>Graphic designer with years of experience...</p>
+        </section>
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <div class="contact-container">
+                <form class="contact-form" id="contact-form">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required placeholder="Your Name">
+        
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required placeholder="Your Email">
+        
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" required placeholder="Your Message" rows="5"></textarea>
+        
+                    <button type="submit">Send Message</button>
+                </form>
+
+                <div class="contact-info">
+                    <h3>Get in Touch</h3>
+                    <p>Email: <a href="mailto:nika.udovic33@gmail.com">nika.udovic33@gmail.com</a></p>
+                    <p>Phone: <a href="tel:+38641814208">+386 41 814 208</a></p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Nika Udovic</p>
+    </footer>
+
+    <script src="./js/script.js"></script>
+    <script>
+        (function() {
+            emailjs.init("UhI4gTRplp2UUhkcr"); // Replace with your user ID
+        })();
+
+        document.getElementById("contact-form").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            emailjs.sendForm('service_b1uedii', 'template_tmhprt8', this)
+            .then(function() {
+                alert('Message sent successfully!');
+                document.getElementById("contact-form").reset(); // Reset form after successful submission
+            }, function(error) {
+                alert('Failed to send message: ' + JSON.stringify(error));
+            });
+        });
+    </script>
+</body>
+</html>
